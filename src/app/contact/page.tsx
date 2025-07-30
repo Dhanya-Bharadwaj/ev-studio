@@ -8,7 +8,7 @@ export default function ContactPage() {
         <main className="pt-32 pb-24 px-6">
             <section className="text-center max-w-4xl mx-auto">
                 <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter">
-                    Let's Connect
+                    Let&apos;s Connect
                 </h1>
                 <p className="mt-6 text-lg max-w-2xl mx-auto text-[color:var(--muted)]">
                     Have a question, a project idea, or just want to say hello? We’d love to hear from you.
