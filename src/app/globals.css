@@ -1,26 +1,29 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Define your color palette here */
+    --background: #F5F5F5; /* Light gray background */
+    --foreground: #111111; /* Dark text */
+    --primary: #00BFFF; /* Deep sky blue accent */
+    --muted: #888888; /* Muted text */
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overscroll-behavior: none; /* Important for smooth scroll */
+}
+
+/* Style for the marquee/ticker */
+.marquee-content {
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
