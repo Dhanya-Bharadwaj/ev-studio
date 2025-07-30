@@ -1,13 +1,15 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import SmoothScroll from "@/components/SmoothScroll";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import PageTransition from '@/components/PageTransition';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "EVCharge | Future of Mobility",
-  description: "Next-generation solutions for electric vehicle charging.",
+  title: 'EVCharge | The Future of Energy, Delivered.',
+  description: 'Intelligent, reliable, and sustainable EV charging infrastructure.',
 };
 
 export default function RootLayout({
@@ -18,7 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SmoothScroll>{children}</SmoothScroll>
+        <Navbar />
+        <PageTransition>
+          {children}
+        </PageTransition>
+        <Footer />
       </body>
     </html>
   );

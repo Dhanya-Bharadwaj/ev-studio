@@ -2,28 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    /* Define your color palette here */
-    --background: #F5F5F5; /* Light gray background */
-    --foreground: #111111; /* Dark text */
-    --primary: #00BFFF; /* Deep sky blue accent */
-    --muted: #888888; /* Muted text */
-  }
+:root {
+  --background: #000000;
+  --foreground: #F5F5F7;
+  --primary: #00BFFF; /* Deep Sky Blue */
+  --muted: #8D8D8D;
+  --card: #1A1A1A;
+  --border: #262626;
 }
 
 body {
-  background-color: var(--background);
   color: var(--foreground);
-  overscroll-behavior: none; /* Important for smooth scroll */
+  background: var(--background);
+  overflow-x: hidden;
 }
 
-/* Style for the marquee/ticker */
-.marquee-content {
-  animation: marquee 30s linear infinite;
+/* For animated gradient text */
+.animated-gradient {
+  background: linear-gradient(to right, var(--primary), #ffffff, var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: gradient-animation 4s linear infinite;
 }
 
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+@keyframes gradient-animation {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* For the floating scooter animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.scooter-float {
+  animation: float 4s ease-in-out infinite;
+  /* This delay starts the float effect only after the scooter has finished moving. */
+  animation-delay: 4.5s;
 }
