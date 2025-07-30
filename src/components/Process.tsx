@@ -26,7 +26,7 @@ export default function Process() {
     <section id="process" ref={containerRef} className="relative h-[300vh] py-24">
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center text-center px-6">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Simple 3-Step Process</h2>
-        <p className="text-lg text-[color:var(--muted)] max-w-2xl mb-16">Charging your EV should be as simple as fueling a traditional car. We've designed our network to be intuitive and hassle-free.</p>
+        <p className="text-lg text-[color:var(--muted)] max-w-2xl mb-16">Charging your EV should be as simple as fueling a traditional car. We&apos;ve designed our network to be intuitive and hassle-free.</p>
 
         <div className="flex flex-col md:flex-row gap-12 w-full max-w-6xl mx-auto">
           {/* Left Side - Illustrations */}
