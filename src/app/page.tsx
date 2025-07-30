@@ -210,7 +210,7 @@ export default function HomePage() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
             >
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Pioneering the Charge Forward.</h2>
-                <p className="mt-6 text-lg text-[color:var(--muted)]">EVCharge is more than a network; we're an ecosystem dedicated to accelerating the transition to sustainable transport. We design, build, and operate the most reliable and user-friendly charging infrastructure in the world.</p>
+                <p className="mt-6 text-lg text-[color:var(--muted)]">EVCharge is more than a network; we&apos;re an ecosystem dedicated to accelerating the transition to sustainable transport. We design, build, and operate the most reliable and user-friendly charging infrastructure in the world.</p>
                 <Link href="/about" className="mt-8 inline-flex items-center gap-2 font-semibold text-[color:var(--primary)] hover:text-sky-300">
                     Learn More About Our Mission <ArrowRight size={20} />
                 </Link>
