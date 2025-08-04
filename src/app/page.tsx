@@ -299,32 +299,35 @@ export default function HomePage() {
       </section>
 
       <section className="py-32 px-6">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">The Minds Behind the Mission</h2>
-            <p className="mt-4 text-lg text-[color:var(--muted)] max-w-2xl mx-auto">Meet some of the brilliant people powering our progress.</p>
-            <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                {teamPreview.map((member, i) => (
-                    <motion.div 
-                        key={member.name} 
-                        className="text-center"
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.5 }}
-                        transition={{ duration: 0.5, delay: i * 0.1 }}
-                    >
-                        <div className="w-32 h-32 rounded-full overflow-hidden mx-auto relative mb-4 group">
-                           <Image src={member.img} alt={member.name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-                        </div>
-                        <h3 className="font-semibold text-lg">{member.name}</h3>
-                        <p className="text-[color:var(--primary)] text-sm">{member.role}</p>
-                    </motion.div>
-                ))}
-            </div>
-            <Link href="/team" className="mt-16 inline-flex items-center gap-2 font-semibold bg-[color:var(--primary)] text-black px-6 py-3 rounded-full hover:bg-sky-300 transition-colors">
-                Meet The Entire Team
-            </Link>
-          </div>
-      </section>
+    <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight">The Minds Behind the Mission</h2>
+        <p className="mt-4 text-lg text-[color:var(--muted)] max-w-2xl mx-auto">Meet some of the brilliant people powering our progress.</p>
+        
+        {/* --- MODIFIED LINE IS HERE --- */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+            {teamPreview.map((member, i) => (
+                <motion.div 
+                    key={member.name} 
+                    className="text-center"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                >
+                    <div className="w-32 h-32 rounded-full overflow-hidden mx-auto relative mb-4 group">
+                       <Image src={member.img} alt={member.name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <h3 className="font-semibold text-lg">{member.name}</h3>
+                    <p className="text-[color:var(--primary)] text-sm">{member.role}</p>
+                </motion.div>
+            ))}
+        </div>
+        
+        <Link href="/team" className="mt-16 inline-flex items-center gap-2 font-semibold bg-[color:var(--primary)] text-black px-6 py-3 rounded-full hover:bg-sky-300 transition-colors">
+            Meet The Entire Team
+        </Link>
+    </div>
+</section>
     </main>
   );
 }
