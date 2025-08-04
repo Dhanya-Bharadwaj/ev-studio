@@ -232,7 +232,7 @@ export default function HomePage() {
             >
                 <motion.h2 variants={pioneeringItemVariants} className="text-4xl md:text-5xl font-bold tracking-tight">Pioneering the Charge Forward.</motion.h2>
                 <motion.p variants={pioneeringItemVariants} className="mt-6 text-lg text-justify text-[color:var(--muted)] max-w-xl">
-                    EVCharge is more than a network; we're an ecosystem dedicated to accelerating the transition to sustainable transport. We design, build, and operate the most reliable and user-friendly charging infrastructure in the world.
+                    EVCharge is more than a network; we&apos;re an ecosystem dedicated to accelerating the transition to sustainable transport. We design, build, and operate the most reliable and user-friendly charging infrastructure in the world.
                 </motion.p>
                 <motion.div variants={pioneeringItemVariants}>
                     <Link href="/about" className="mt-8 inline-flex items-center gap-2 font-semibold text-[color:var(--primary)] hover:text-sky-300 transition-transform hover:translate-x-1">
